@@ -34,7 +34,8 @@ if($ComputerOU -ne "Distinguished Name Required" ) {
         #Disable computers
         Get-ADComputer -Identity $ComputerName | Set-ADComputer -Enabled $false
         #Move computers
-        Get-ADComputer -Identity $ComputerName | Move-ADObject -TargetPath  "OU=Computer Disabled,DC=pine,DC=pbmhr,DC=intra"
+        #Add the TargetPath for your domain in the DN form... OU=OU,DC=Domain,DC=DOmain...
+        Get-ADComputer -Identity $ComputerName | Move-ADObject -TargetPath  "Distinguished Name Required"
         Write-Output "Computer Disabled"
     } 
 } #IF 1
