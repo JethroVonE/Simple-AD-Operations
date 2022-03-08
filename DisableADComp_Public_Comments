@@ -1,0 +1,2 @@
+DisableADCompu90_public is a short script to disable computers that have not logged into AD in more than 90 days. This disables the computers and moves them to a OU that needs to be created. 
+This part is left open... read the comments and make a couple of changes on the file for it to work.
